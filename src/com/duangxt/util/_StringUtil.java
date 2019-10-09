@@ -133,4 +133,24 @@ public class _StringUtil {
 	 * @return 不为空返回true，为空返回false
 	 */
 	public static boolean isNotEmpty(String s){return !isEmpty(s);}
+
+	/** 字符串是否是纯数字（不允许有空格） */
+	public static boolean isNumber(String s){
+		return null==s||"".equals(s)?false:"".equals(s.replaceAll("[0-9]",""));
+	}
+
+	/** 字符串是否是纯字母（不允许有空格） */
+	public static boolean isLetter(String s){
+		return null==s||"".equals(s)?false:"".equals(s.replaceAll("[A-Za-z]",""));
+	}
+
+	/** 字符串是否是纯小写字母（不允许有空格） */
+	public static boolean isLowerCaseLetter(String s){
+		return null==s||"".equals(s)?false:"".equals(s.replaceAll("[a-z]",""));
+	}
+
+	/** 字符串是否是纯大写字母（不允许有空格） */
+	public static boolean isUpperCaseLetter(String s){
+		return null==s||"".equals(s)?false:"".equals(s.replaceAll("[A-Z]",""));
+	}
 }
